@@ -1,0 +1,26 @@
+{
+  "name": "pi-cam",
+  "version": "1.0.0",
+  "description": "Capture and view images using a webcam",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "node-schedule": "^1.1.0",
+    "simple-node-logger": "^0.93.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariuscoto/pi-cam.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mariuscoto/pi-cam/issues"
+  },
+  "homepage": "https://github.com/mariuscoto/pi-cam#readme"
+}
