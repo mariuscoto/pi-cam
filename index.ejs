@@ -12,7 +12,7 @@
         var times = 3000; // refresh rate
 
         (function startRefresh() {
-            $.get('http://localhost:3000/latest', function(res) {
+            $.get('http://<%= hostname %>:3000/latest', function(res) {
                 node.attr("src", res.path);
             });
 

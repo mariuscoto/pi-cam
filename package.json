@@ -4,6 +4,7 @@
   "description": "Capture and view images using a webcam",
   "main": "server.js",
   "dependencies": {
+    "ejs": "^2.4.2",
     "express": "^4.13.4",
     "node-schedule": "^1.1.0"
   },

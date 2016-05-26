@@ -4,7 +4,9 @@ exports.path = '/Volumes/Other/pi-cam/snaps'
 // Commadn used for snapping pictures (assumes command exists)
 // For Mac: imagesnap
 // For Raspberry: fswebcam -r 1280x720 --no-banner
-exports.cmd = 'fswebcam -r 1280x720 --no-banner'
+exports.cmd = 'imagesnap'
+
+exports.hostname = 'localhost'
 
 // Cron style scheduling for taking photos
 exports.time = '*/5 * * * * *'
