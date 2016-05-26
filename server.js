@@ -65,6 +65,10 @@ app.get('/latest', function (req, res) {
   }
 });
 
+app.get('/', function (req, res) {
+    res.redirect('/view/latest');
+});
+
 app.get('/view/latest', function (req, res) {
     res.render('index', {hostname: config.hostname});
 });
