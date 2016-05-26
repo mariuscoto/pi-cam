@@ -1,5 +1,4 @@
 var schedule = require('node-schedule');
-var log      = require('simple-node-logger').createSimpleLogger();
 var config   = require('./config')
 var path     = require('path')
 var express  = require('express');
@@ -9,18 +8,17 @@ var app      = express();
 var job = schedule.scheduleJob(config.time, snap_photo);
 
 function snap_photo() {
-    const exec = require('child_process').exec;
-    const command = 'imagesnap ' + config.path + '/$(date +%y%m%d%H%M%S).png'
-    const child = exec(command,
-        (error, stdout, stderr) => {
+    var exec = require('child_process').exec;
+    var command = config.cmd + ' ' + config.path + '/$(date +%y%m%d%H%M%S).png'
+    var child = exec(command, function(error, stdout, stderr) {
             if (stderr !== '') {
-                log.debug("STDERR: " + stderr);
+                console.log("STDERR: " + stderr);
             }
             if (stdout !== '') {
-                log.debug("STDOUT: " + stdout);
+                console.log("STDOUT: " + stdout);
             }
             if (error !== null) {
-                log.error("EXEC ERROR: " + error);
+                console.log("EXEC ERROR: " + error);
             }
     });
 }
